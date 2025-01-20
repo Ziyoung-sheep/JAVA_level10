@@ -10,6 +10,8 @@ public class Boss extends Zombie {
 		this.shield=shield;
 	}
 	
+	
+	
 	//필살공격!
 
 }

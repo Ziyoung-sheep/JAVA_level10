@@ -1,4 +1,4 @@
-package _09제네틱클래스;
+package _09제네릭클래스;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ class MyArrayList<T>{
 	private int capacity=10;
 	MyArrayList(){
 		//arr=new T[capacity]; //제네릭 클래스로 배열선언을 할 수 없다!
-		arr=(T[])new Object[10];
+		arr=(T[])new Object[10];//오브젝트로 생성해서 T타입으로 강제 변환
 	}
 	public void print() {
 		System.out.println(Arrays.toString(arr));
