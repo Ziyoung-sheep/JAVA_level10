@@ -14,7 +14,7 @@ public class Member {
 	}
 	@Override
 	public String toString() {
-		return "\t" + id +" : " + pw +" : " + name;
+		return "ID:" + id +"\tPW: " + pw +"\tNAME: " + name;
 	}
 	public String getId() {
 		return id;

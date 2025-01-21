@@ -4,8 +4,7 @@ public class ActionLoad implements Action{
 
 	@Override
 	public void excute() {
-		// TODO Auto-generated method stub
-		
+		utils.load();
 	}
 
 }
