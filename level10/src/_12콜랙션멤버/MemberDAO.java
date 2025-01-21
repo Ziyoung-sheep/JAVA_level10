@@ -20,4 +20,16 @@ public class MemberDAO {
 		this.memberList = memberList;
 	}
 	
+	public int inIdOutIdx(String Id) {
+		int idx=-1;
+		for (int i = 0; i < memberList.size(); i++) {
+			if (memberList.get(i).getId().equals(Id)) idx=i;break;
+		}
+		return idx;
+	}
+	
+	public void join(String id, String pw, String name) {
+		memberList.add(new Member(id, pw, name));
+	}
+	
 }
