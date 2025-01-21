@@ -1,6 +1,7 @@
 package _12콜랙션멤버;
 
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 public class MemberDAO {
 	
@@ -50,16 +51,29 @@ public class MemberDAO {
 		if (memberList==null) {
 			System.err.println("회원이 없습니다.");
 		}else {
+			
+			TreeSet<Member>treeSet=new TreeSet<>(new MemberComp(MemberComp.SortBy.NAME));
+			
+			for (int i = 0; i < memberList.size(); i++) {
+				treeSet.add(memberList.get(i));
+			}
+			
 			int num=1;
-			for (Member member : memberList) {
+			for (Member member : treeSet) {
 				System.out.println("["+(num++)+"]"+member.toString());
 			}
 		}
 	}
 	
 	public String makeData() {
+		
+		TreeSet<Member>treeSet=new TreeSet<>(new MemberComp(MemberComp.SortBy.ID));
+		for (int i = 0; i < memberList.size(); i++) {
+			treeSet.add(memberList.get(i));
+		}
+		
 		String data = "";
-		for (Member member : memberList) {
+		for (Member member: treeSet) {
 			data+=member.toString()+"\n";
 		}
 		return data;
