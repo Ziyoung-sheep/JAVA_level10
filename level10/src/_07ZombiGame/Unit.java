@@ -4,7 +4,7 @@ import java.util.Random;
 
 abstract public class Unit {
 	
-	private Random rd=new Random();
+	private static Random rd=new Random();
 	private String name;
 	private int pos;
 	private int hp;
@@ -61,7 +61,7 @@ abstract public class Unit {
 		}
 	}
 	
-	public int playRandom(int num, int startNum) {
+	public static int playRandom(int num, int startNum) {
 		return rd.nextInt(num)+startNum;
 	}
 
