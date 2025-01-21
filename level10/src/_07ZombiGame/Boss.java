@@ -10,22 +10,26 @@ public class Boss extends Zombie {
 		this.shield=shield;
 	}
 	
+	public int getShield() {
+		return shield;
+	}
+	public void setShield(int shield) {
+		this.shield = shield;
+	}
+
 	public void attack(Unit diffenser) {
 		int num=playRandom(5, 0);
 		if (num!=0) {
 			super.attack(diffenser);
 		}else {
 			int damage=playRandom(getPower(), 0)*2;
+			System.out.printf("%s의 필살공격!\n",getName());
+			System.out.printf("%s가 %s에게 %d의 두 배로 데미지를 주었습니다.\n", getName(), diffenser.getName(), damage);
 			diffenser.setHp(diffenser.getHp()-damage);;
 			if (diffenser.getHp()<=0) {
 				diffenser.setHp(0);;
-				System.out.println(diffenser.toString()+"이 사망했습니다.");
+				System.out.println(diffenser.getName()+"가 사망했습니다.");
 			}
 		}
-		
 	}
-	
-	
-	//필살공격!
-
 }

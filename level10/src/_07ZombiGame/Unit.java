@@ -54,10 +54,11 @@ abstract public class Unit {
 	
 	public void attack(Unit diffenser){ //공격받을애
 		int damage=rd.nextInt(power);
+		System.out.printf("%s가 %s에게 %d의 데미지를 주었습니다.\n", name, diffenser.getName(), damage);
 		diffenser.hp-=damage;
 		if (diffenser.hp<=0) {
 			diffenser.hp=0;
-			System.out.println(diffenser.toString()+"이 사망했습니다.");
+			System.err.println(diffenser.getName()+"가 사망했습니다.");
 		}
 	}
 	

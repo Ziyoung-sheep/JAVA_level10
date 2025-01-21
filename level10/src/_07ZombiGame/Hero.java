@@ -9,13 +9,27 @@ public class Hero extends Unit {
 		this.potion=potion;
 	}
 	
+	public int getPotion() {
+		return potion;
+	}
+
+	public void setPotion(int potion) {
+		this.potion = potion;
+	}
+
 	public void attack(Zombie diffenser) {//쉴드가 잇을 경우 쉴드부터 깨기
 		super.attack(diffenser);
-		if (diffenser.getHp()>0) {
+	}
+	
+	public void repair(Zombie diffenser) {
+		if (diffenser.getHp()>0&&diffenser.getHp()!=diffenser.getMAX_HP()) {
 			int plusHp=playRandom(diffenser.getRepair(), 1);
-			diffenser.setHp(getHp()+plusHp);
-			System.out.printf("%s가 hp를 %d 회복했습니다.", diffenser.getName(), plusHp);
-			diffenser.toString();
+			diffenser.setHp(diffenser.getHp()+plusHp);
+			if (diffenser.getMAX_HP()<diffenser.getHp()) {
+				diffenser.setHp(diffenser.getMAX_HP());
+			}
+			System.out.printf("%s가 hp를 %d 회복했습니다.\n", diffenser.getName(), plusHp);
+//			diffenser.toString();
 		}
 	}
 }

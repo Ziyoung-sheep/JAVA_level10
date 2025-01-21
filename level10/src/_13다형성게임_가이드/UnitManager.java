@@ -7,7 +7,7 @@ public class UnitManager {
 
 	Vector<Player> player_list = new Vector<>();
 	Vector<Unit> mon_list = new Vector<>();
-	String path = "game."; // 패키지명 + .
+	String path = UnitManager.class.getPackageName()+"."; // 패키지명 + .
 	String mons[] = { "UnitWolf", "UnitBat", "UnitOrc" };
 	Random ran = new Random();
 

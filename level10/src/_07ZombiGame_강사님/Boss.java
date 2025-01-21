@@ -15,16 +15,17 @@ public class Boss extends Zombie {
 
 	private int shield;
 
-	public int getShield() {
-		return shield;
-	}
-
-	public void setShield(int shield) {
-		this.shield = shield;
-	}
 
 	public Boss(String name, int pos, int hp, int power, int shield) {
 		super("보스", pos, hp, power);
+		this.shield = shield;
+	}
+	
+	public int getShield() {
+		return shield;
+	}
+	
+	public void setShield(int shield) {
 		this.shield = shield;
 	}
 
