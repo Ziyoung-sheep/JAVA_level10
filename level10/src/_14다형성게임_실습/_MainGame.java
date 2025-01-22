@@ -4,6 +4,7 @@ public class _MainGame {
 
 	public static void main(String[] args) {
 		GameManager gameManager = new GameManager();
+		gameManager.run();
 		
 		// polyGame_guide 는 미완성 가이드입니다.
 		// 콘솔 실행 후, 게임의 흐름을 파악한 뒤 -> 프로젝트를 완성해주세요.
