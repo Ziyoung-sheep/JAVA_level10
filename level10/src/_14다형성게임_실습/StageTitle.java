@@ -4,14 +4,18 @@ public class StageTitle extends Stage {
 
 	@Override
 	public boolean update() {
-		// TODO Auto-generated method stub
+		System.out.println("=======================");
+		System.out.println("=         파이널텍스트판타지1.4         =");
+		System.out.println("=======================");
+		String go=Utiles.getInstance().inString("[시작]을 입력하세요>>");
+		if (go.equals("시작")) {
+			return true;
+		}
 		return false;
 	}
 
 	@Override
 	public void init() {
-		// TODO Auto-generated method stub
 		
 	}
-
 }

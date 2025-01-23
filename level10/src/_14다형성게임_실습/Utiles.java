@@ -57,5 +57,24 @@ public class Utiles {
 		}
 		return num;
 	}
-
+	
+	public String inString(String msg) {
+		String temp="";
+		while (true) {
+			System.out.printf("%s>>", msg);
+			try {
+				temp=sc.nextLine();
+				break;
+			} catch (Exception e) {
+				System.err.println("입력오류");
+				continue;
+			}
+		}
+		return temp;
+	}
+	
+	public int random(int cnt, int startNum) {
+		return rd.nextInt(cnt)+startNum;
+	}
+	
 }
