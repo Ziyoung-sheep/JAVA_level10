@@ -41,7 +41,7 @@ public class Utiles {
 		int num=-1;
 		while(true) {
 				try {
-					System.out.printf("(%d-%d)>>",msg,start,end);
+					System.out.printf("%s(%d-%d)>>",msg,start,end);
 					num=sc.nextInt();
 					sc.nextLine();
 					if (num<start||num>end) {
@@ -76,5 +76,4 @@ public class Utiles {
 	public int random(int cnt, int startNum) {
 		return rd.nextInt(cnt)+startNum;
 	}
-	
 }
