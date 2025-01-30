@@ -8,11 +8,11 @@ public class PlyerMeleeDealer extends Player {
 		super(name, "근거리 딜러", hp, mAX_HP, power);
 	}
 	
-	private void limitBreakSkill(ArrayList<Object> mon_list) {
+	public void limitBreakSkill(ArrayList<Object> player_list, ArrayList<Object> mon_list) {
 		System.out.println("랜덤 몹 1마리 데미지 50!");
 		while(true) {
 			int pick=Utiles.getInstance().random(mon_list.size(), 0);
-			Unit temp=(Unit)mon_list.get(pick);
+			Monster temp=(Monster)mon_list.get(pick);
 			if (temp.getHp()==0) {
 				continue;
 			}

@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 public class UnitManager {
-//	Vector<Object> player_list = new Vector<>();
-//	Vector<Object> mon_list = new Vector<>();
+	
 	ArrayList<Object> player_list = new ArrayList();
 	ArrayList<Object> mon_list = new ArrayList();
 	
@@ -34,9 +33,6 @@ public class UnitManager {
 				mon_list.add(new MonsterMalboro(malboroHp,malboroPower));
 			}
 		}
-//		for (int i = 0; i < player_list.size(); i++) {
-//			System.out.println(player_list.get(i).toString());
-//			System.out.println(mon_list.get(i).toString());
-//		}
+
 	}
 } 

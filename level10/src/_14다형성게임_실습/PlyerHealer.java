@@ -8,10 +8,10 @@ public class PlyerHealer extends Player {
 		super(name, "힐러", hp, mAX_HP, power);
 	}
 	
-	private void limitBreakSkill(ArrayList<Object> player_list) {
+	public void limitBreakSkill(ArrayList<Object> player_list, ArrayList<Object> mon_list) {
 		System.out.println("생존한 파티원 전원 HP 회복!");
 		for (int i = 0; i < player_list.size(); i++) {
-			Unit temp=(Unit)player_list.get(i);
+			Player temp=(Player)player_list.get(i);
 			if (temp.getHp()!=0) {
 				temp.setHp(temp.getMAX_HP());
 				player_list.set(i, temp);

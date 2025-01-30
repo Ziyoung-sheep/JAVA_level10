@@ -1,5 +1,7 @@
 package _14다형성게임_실습;
 
+import java.util.ArrayList;
+
 import _07ZombiGame.Unit;
 
 public class Player extends Unit {
@@ -33,7 +35,8 @@ public class Player extends Unit {
 		this.limitBreak = limitBreak;
 	}
 
-	public void limitBreakSkill() {
+	public void limitBreakSkill(ArrayList<Object> myTeam, ArrayList<Object> yourTeam) {
+		// TODO Auto-generated method stub
 		
 	}
 

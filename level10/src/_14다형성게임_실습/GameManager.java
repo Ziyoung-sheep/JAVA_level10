@@ -6,7 +6,7 @@ public class GameManager {
 	Stage stageNow = new StageTitle();
 	
 	public void run(){
-		while(true) {
+		while(!exit) {
 			if (stageNow.update()) {
 				stageNow=new StageLobby();
 				if (stageNow.update()) {
@@ -15,10 +15,9 @@ public class GameManager {
 					exit=true;
 				}
 			}
-			if (exit) {
-				System.err.println("게임 종료");
-				break;
-			}
+		}
+		if (exit) {
+			System.err.println("게임 종료");
 		}
 	}
 }
