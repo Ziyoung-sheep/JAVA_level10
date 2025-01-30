@@ -12,8 +12,16 @@ public class StageBattle extends Stage {
 	int playerCnt;
 	UnitManager unitManager;
 	private int playerParty;
-	private int monsterParty;
+	static int monsterParty;
 	static boolean tankerLimit;
+	
+//	public int getMonsterParty() {
+//		return monsterParty;
+//	}
+//
+//	public void setMonsterParty(int monsterParty) {
+//		this.monsterParty = monsterParty;
+//	}
 
 	@Override
 	public boolean update() {

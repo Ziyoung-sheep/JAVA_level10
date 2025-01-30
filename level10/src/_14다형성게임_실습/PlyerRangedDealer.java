@@ -16,6 +16,7 @@ public class PlyerRangedDealer extends Player {
 				temp.setHp(temp.getHp()-15);
 				if (temp.getHp()<=0) {
 					temp.setHp(0);
+					StageBattle.monsterParty--;
 					System.err.println(temp.getName()+"을 해치웠습니다.");
 				}
 				mon_list.set(i, temp);

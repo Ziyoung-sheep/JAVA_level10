@@ -20,6 +20,7 @@ public class PlyerMeleeDealer extends Player {
 			System.out.printf("%s가 %s에게 %d의 데미지를 주었습니다.\n", getName(), temp.getName(), 50);
 			if (temp.getHp()<=0) {
 				temp.setHp(0);
+				StageBattle.monsterParty--;
 				System.err.println(temp.getName()+"을 해치웠습니다.");
 			}
 			mon_list.set(pick, temp);
