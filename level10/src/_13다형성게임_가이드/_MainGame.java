@@ -14,3 +14,6 @@ public class _MainGame {
 		System.out.println("게임오버");
 	}
 }
+
+
+
